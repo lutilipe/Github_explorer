@@ -14,8 +14,8 @@ interface RepositoryParams {
 interface Repository {
   full_name: string;
   stargazers_count: number;
-  forks_counter: number;
-  open_issues_counter: number;
+  forks_count: number;
+  open_issues_count: number;
   owner: {
     login: string;
     avatar_url: string;
@@ -72,15 +72,15 @@ const Repository: React.FC = () => {
           </header>
           <ul>
             <li>
-              <strong>{repository.stargazers_count || 0}</strong>
+              <strong>{repository.stargazers_count}</strong>
               <span>Stars</span>
             </li>
             <li>
-              <strong>{repository.forks_counter || 0}</strong>
+              <strong>{repository.forks_count}</strong>
               <span>Forks</span>
             </li>
             <li>
-              <strong>{repository.open_issues_counter || 0}</strong>
+              <strong>{repository.open_issues_count}</strong>
               <span>Issues abertas</span>
             </li>
           </ul>
